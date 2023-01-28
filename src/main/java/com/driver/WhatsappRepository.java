@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class WhatsappRepository {
-@Repository
+
     //Assume that each user belongs to at most one group
     //You can use the below mentioned hashmaps or delete these and create your own.
     HashMap<Group, List<User>> groupUserMap;
@@ -40,7 +40,7 @@ public class WhatsappRepository {
         User user = new User(name,mobile);
         userMobile.add(mobile);
         userDb.add(user);
-        return "SUCCESS";
+        return "success";
     }
     public Group createGroup(List<User> users){
         if (users.size() < 2){
